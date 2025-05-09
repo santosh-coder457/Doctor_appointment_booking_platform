@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgeries - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Sur.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/find_doctor/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/consults/">Consult Online</a></li>
+                <li><a href="/MedguardHome/medicine/">Medicines</a></li>
+                <li><a href="/MedguardHome/labs/">Labs</a></li>
+                <li><a href="/MedguardHome/dashpage/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/more/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="surgeries-page">
+        <h1>Surgeries</h1>
+        <div class="surgery-list">
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/appendectomy.avif' %}" alt="Appendectomy">
+                <h3>Appendectomy</h3>
+                <p>Surgical removal of the appendix.</p>
+                <button class="learn-more"><a href="https://www.sages.org/publications/patient-information/patient-information-for-laparoscopic-appendectomy-from-sages/" target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/cholecystectomy.avif' %}" alt="Cholecystectomy">
+                <h3>Cholecystectomy</h3>
+                <p>Surgical removal of the gallbladder.</p>
+                <button class="learn-more"><a href="https://my.clevelandclinic.org/health/procedures/21614-gallbladder-removal"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/hernia.jpg' %}" alt="Hernia Repair">
+                <h3>Hernia Repair</h3>
+                <p>Surgical repair of a hernia.</p>
+                <button class="learn-more"><a href="https://www.rupahealth.com/post/hernia-surgery-a-complete-guide-to-types-risks-recovery"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/knee replacement.avif' %}" alt="Knee Replacement">
+                <h3>Knee Replacement</h3>
+                <p>Surgical replacement of a knee joint.</p>
+                <button class="learn-more"><a href="https://www.healthline.com/health/total-knee-replacement-surgery-step-by-step#step-6"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/thyroid.avif' %}" alt="Thyroidectomy">
+                <h3>Thyroidectomy</h3>
+                <p>Partial or complete removal of the thyroid gland, often for thyroid nodules or cancer.</p>
+                <button class="learn-more"><a href="https://healthjade.net/thyroidectomy/"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/Cesarean Section (C-section).avif' %}" alt="Cesarean Section (C-section)">
+                <h3>Cesarean Section (C-section)</h3>
+                <p>Surgical delivery of a baby through abdominal and uterine incisions.</p>
+                <button class="learn-more"><a href="https://my.clevelandclinic.org/health/treatments/7246-cesarean-birth-c-section"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/Hysterectomy.avif' %}" alt="Hysterectomy">
+                <h3>Hysterectomy</h3>
+                <p>Removal of the uterus.</p>
+                <button class="learn-more"><a href="https://my.clevelandclinic.org/health/procedures/hysterectomy"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/Hip Replacement.avif' %}" alt="Hip Replacement">
+                <h3>Hip Replacement</h3>
+                <p>Replacing a damaged hip joint with a prosthesis.</p>
+                <button class="learn-more"><a href="https://www.hemcortho.com/hip-prosthesis-what-are-the-types-and-benefits/"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/Coronary Artery Bypass Grafting (CABG).jpg' %}" alt="Coronary Artery Bypass Grafting (CABG)">
+                <h3>Coronary Artery Bypass Grafting (CABG)</h3>
+                <p>Creating new pathways for blood flow around blocked heart arteries.</p>
+                <button class="learn-more"><a href="https://www.medicoverhospitals.in/procedures/heart-bypass-surgery/"target="_blank">Learn More</a></button>
+            </div>
+            <div class="surgery-item">
+                <img src="{% static 'surgeries/Cataract Surgery.avif' %}" alt="Cataract Surgery">
+                <h3>Cataract Surgery</h3>
+                <p> Replacement of a clouded eye lens with an artificial one.</p>
+                <button class="learn-more"><a href="https://www.centreforsight.net/eye-treatment/cataract-eye-surgery-in-india"target="_blank">Learn More</a></button>
+            </div>
+        </div>
+
+        <div class="surgery-info">
+            <h2>⚠️Important Information⚠️</h2>
+            <p>Surgical procedures should be discussed with a qualified medical professional. This page provides general information and should not be considered medical advice.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

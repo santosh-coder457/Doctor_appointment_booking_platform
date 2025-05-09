@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Tests - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'labs.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/find_doctor/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/consults/">Consult Online</a></li>
+                <li><a href="/MedguardHome/medicine/">Medicines</a></li>
+                <li><a href="/MedguardHome/dashpage/">Labs</a></li>
+                <li><a href="/MedguardHome/surgeries/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/more/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="labs-page">
+        <h1>Lab Tests</h1>
+        <div class="lab-search">
+            <input type="text" placeholder="Search for lab tests...">
+            <button>Search</button>
+        </div>
+        <div class="lab-list">
+            <div class="lab-item">
+                <img src="{% static 'Labs/Blood test.avif' %}" alt="Blood Test">
+                <h3>Blood Test</h3>
+                <p>Comprehensive blood analysis.</p>
+                <p>Price: ₹149</p>
+                <a href="https://www.lifesonmanipal.com/healthcheckup?location=MHS" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/urine test.jpg' %}" alt="Urine Test">
+                <h3>Urine Test</h3>
+                <p>Urine analysis for various conditions.</p>
+                <p>Price: ₹145</p>
+                <a href="https://www.pathkindlabs.com/diagnostic/urine-routine-microscopic-examination" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/xray.jpg' %}" alt="X-Ray">
+                <h3>X-Ray</h3>
+                <p>Imaging for bone and tissue analysis.</p>
+                <p>Price: ₹776</p>
+                <a href="https://www.apollo247.com/radiology/x-ray" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/ctscan.jpg' %}" alt="CT Scan">
+                <h3>CT Scan</h3>
+                <p>Detailed cross-sectional imaging.</p>
+                <p>Price: ₹1500</p>
+                <a href="https://bookmyscans.com/bangalore/ct-scan-cost" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/complete-blood-count.jpg' %}" alt="CT Scan">
+                <h3>Complete Blood Count (CBC)</h3>
+                <p>measures the different types of cells in your blood, including red blood cells, white blood cells, and platelets.</p>
+                <p>Price: ₹350</p>
+                <a href="https://www.lalpathlabs.com/pathology-test/complete-blood-count" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/BMP.jpg' %}" alt="CT Scan">
+                <h3>Basic Metabolic Panel (BMP)</h3>
+                <p>measures electrolyte levels, kidney function, and blood glucose levels.</p>
+                <p>Price: ₹2599</p>
+                <a href="https://www.healthcareontime.com/test/basic-metabolic-panel-bmp/?srsltid=AfmBOooyxnVAEdmhYbWelAWjYi8uOaYqsISDpo7MVfZITGlVT81hCzE2" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/CMP.jpg' %}" alt="CT Scan">
+                <h3>Comprehensive Metabolic Panel (CMP)</h3>
+                <p>It provides a more detailed assessment of organ function.</p>
+                <p>Price: ₹5100</p>
+                <a href="http://metropolisindia.com/parameter/comprehensive-metabolic-panel" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/Tyroid.avif' %}" alt="CT Scan">
+                <h3>Thyroid Function Tests</h3>
+                <p>measure thyroid hormone levels.</p>
+                <p>Price: Rs2800.00</p>
+                <a href="https://www.apollo247.com/lab-tests-category/thyroid" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/HEMOGLOBIN.jpg' %}" alt="CT Scan">
+                <h3>Hemoglobin A1c (HbA1c)</h3>
+                <p>measures your average blood sugar levels over the past 2-3 months.</p>
+                <p>Price: ₹610</p>
+                <a href="https://www.apollo247.com/lab-tests/hba1c-glycated-hemoglobin?source=Home_Page" target="_blank" class="book-test">
+                    Online Booking
+                </a>
+                
+            </div>
+            <div class="lab-item">
+                <img src="{% static 'Labs/levar.jpg' %}" alt="CT Scan">
+                <h3>Liver Function Tests (LFTs)</h3>
+                <p>They help to diagnose liver damage or disease.</p>
+                <p>Price: ₹399</p>
+                <a href="https://www.1mg.com/labs/test/lft-liver-function-test-2562?srsltid=AfmBOoqabtAKDV8nZnFGYcw9wCAvCOPy5U7HYgFIrLoOUdY71v7ESZGh&wpsrc=Google+Organic+Search" target="_blank" class="book-test">
+                    Online Booking
+                </a>
+            </div>
+        </div>
+
+        <div class="lab-info">
+            <h2>How to Book a Lab Test</h2>
+            <ol>
+                <li>Search for the desired lab test.</li>
+                <li>Select a convenient date and time.</li>
+                <li>Provide your personal information.</li>
+                <li>Confirm your booking and payment.</li>
+                <li>Receive your results online.</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

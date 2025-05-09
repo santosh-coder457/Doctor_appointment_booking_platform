@@ -1,0 +1,66 @@
+/* labs.css */
+
+.labs-page {
+    padding: 20px;
+}
+
+.lab-search {
+    margin-bottom: 20px;
+}
+
+.lab-search input {
+    padding: 10px;
+    width: 300px;
+}
+
+.lab-search button {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.lab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lab-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.lab-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.book-test {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.lab-info {
+    margin-top: 30px;
+}
+
+.lab-info ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.lab-info li {
+    margin-bottom: 10px;
+}

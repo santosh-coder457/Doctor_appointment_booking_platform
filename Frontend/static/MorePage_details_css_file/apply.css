@@ -1,0 +1,140 @@
+/* apply.css */
+.apply-hero {
+    background-color: wheat;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.apply-hero .hero-content h1 {
+    color: #19a99d;
+    margin-bottom: 10px;
+}
+
+.apply-hero .hero-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.application-form-section {
+    padding: 20px 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+}
+
+.application-form-section h2 {
+    color: #19a99d;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.application-form-section .form-group {
+    margin-bottom: 20px;
+}
+
+.application-form-section label {
+    display: block;
+    margin-bottom: 8px;
+    color:#19a99d;
+    font-weight: bold;
+}
+
+.application-form-section input[type="text"],
+.application-form-section input[type="email"],
+.application-form-section input[type="tel"],
+.application-form-section input[type="url"],
+.application-form-section input[type="file"],
+.application-form-section textarea,
+.application-form-section select {
+    width: calc(100% - 16px);
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.application-form-section textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.application-form-section .file-formats {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.application-form-section .submit-button {
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.application-form-section .submit-button:hover {
+    background-color: #218838;
+}
+
+.application-form-section .submission-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.application-form-section .submission-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.application-form-section .submission-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#domain-fields > div {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#domain-fields h3 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#portfolio-group {
+    display: none; /* Initially hidden */
+}
+
+#linkedin-group {
+    display: none; /* Initially hidden */
+}
+#image{
+    height: 100px;
+}
+footer {
+    
+    color:#19a99d;
+    text-align: center;
+    padding: 1rem 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}

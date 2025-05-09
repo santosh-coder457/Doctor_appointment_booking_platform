@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'MorePage_details_css_file/faq.css' %}">
+</head>
+<body>
+    <section class="faq-hero">
+        <div class="hero-image">
+            <a href="/MedguardHome/more/"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <div class="hero-content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about MedGuard and our services.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>General Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">What is MedGuard?</button>
+                <div class="faq-answer">
+                    <p>MedGuard is a comprehensive healthcare platform designed to connect patients with doctors, provide online consultation services, offer information about medicines and labs, and more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do I find a doctor?</button>
+                <div class="faq-answer">
+                    <p>You can use our "Find Doctors" feature, where you can search by specialty, name, location, and other criteria to find the right doctor for your needs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is online consultation safe?</button>
+                <div class="faq-answer">
+                    <p>Yes, our online consultation platform uses secure and encrypted channels to ensure the privacy and confidentiality of your communication with doctors.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Account & Profile</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">How do I create an account?</button>
+                <div class="faq-answer">
+                    <p>You can create an account by clicking on the "Login/Signup" button in the header and following the registration process.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What if I forget my password?</button>
+                <div class="faq-answer">
+                    <p>You can reset your password by clicking on the "Forgot Password" link on the login page and following the instructions sent to your registered email address.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Using Our Services</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">How do I book an appointment?</button>
+                <div class="faq-answer">
+                    <p>Once you find a doctor, you will see an option to "Book Appointment" on their profile. Click on it and follow the steps to select a date and time.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Where can I find information about medicines?</button>
+                <div class="faq-answer">
+                    <p>Our "Medicines" section provides detailed information about various medications, including their uses, side effects, and precautions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+    <!-- /* JavaScript to handle FAQ toggle (optional, but enhances interactivity) */ -->
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'login-signup.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <div class="form-wrapper" id="loginForm">
+                <h2>Signup</h2>
+                <form id="login-form" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <label for="loginEmail">Username</label>
+                        <input type="text" id="loginEmail" name="username" required>
+                    </div>
+                    <p style="color: red;"> {{error}} </p>
+                    <div class="input-group">
+                        <label for="loginEmail">Firstname</label>
+                        <input type="text" id="loginEmail" name="firstname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginEmail">Lastname</label>
+                        <input type="text" id="loginEmail" name="lastname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginEmail">Password</label>
+                        <input type="password" id="loginEmail" name="password" required>
+                    </div>
+
+                    <button type="submit">Signup</button>
+                </form>
+                
+                
+            </div>
+
+
+               
+                <!-- <p>Already have an account? <a href="#" id="loginLink">Login</a></p> -->
+                
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,147 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color:white; /* Example MedGuard primary color */
+    color: #19a99d;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #19a99d;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    
+}
+
+nav ul li a:hover {
+    background-color:green;
+    color: #333;
+}
+
+nav ul li.active a {
+    font-weight: bold;
+}
+
+.about-us-container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container h2 {
+    color: #19a99d; /* Example MedGuard primary color */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 0.5rem;
+}
+
+.about-us-container p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.mission,
+.vision,
+.our-story,
+.our-team,
+.our-values {
+    margin-bottom: 2rem;
+}
+
+.our-values ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.our-values li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-cta {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.contact-cta h2 {
+    color: #19a99d; /* Example MedGuard primary color */
+    margin-bottom: 1rem;
+}
+
+.contact-cta .button {
+    display: inline-block;
+    background-color: #28a745; /* Example call-to-action color */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.contact-cta .button:hover {
+    background-color:aquamarine;
+    color: #333;
+}
+
+footer {
+    color:#19a99d;
+    text-align: center;
+    padding: 1rem 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-us-container {
+        padding: 1.5rem;
+        margin: 1.5rem;
+    }
+}

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Doctors</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/appointment-form.css' %}">
+    <style>
+        body{
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1{
+    text-align: center;
+    color: #19a99d;
+    margin-top: 20px;
+  }
+  
+  form {
+    color: #19a99d;
+    max-width: 600px;
+    margin: 20px auto;
+    padding:50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  input[type="submit"] {
+    background-color: #20c997;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #198754;
+  }
+    </style>
+</head>
+<body>
+    
+    
+    <form action="" method="POST" >
+        <div class="logo">
+           <center> <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a></center>
+        </div>
+        <h1>Book Doctors</h1>
+        {% csrf_token %}
+        {{appointment_form}}
+        <input type="submit" value="Submit Appointment">
+    </form>
+</body>
+</html>

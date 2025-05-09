@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for [Job Title] - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'MorePage_details_css_file/apply.css' %}">
+</head>
+<body>
+    <section class="apply-hero">
+        <div>
+    <a href="/MedguardHome/more/"> <img style="height: 100px; background-color:#e5e7e9;" src="{% static 'MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <div class="hero-content">
+            <h1>Apply For Your Career</h1>
+            <p><b>Thank you for your interest in joining MedGuard. Please fill out the form below to submit your application.</b></p>
+        </div>
+    </section>
+
+    <section class="application-form-section">
+        <h2>Application Form</h2>
+        <form id="applicationForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="domain">Applying For:</label>
+                <select id="domain" name="domain" required>
+                    <option value="">Select a Domain</option>
+                    <option value="software_engineer">Software Engineer</option>
+                    <option value="customer_support">Customer Support Specialist</option>
+                    <option value="marketing_manager">Marketing Manager</option>
+                    <option value="healthcare_consultant">Healthcare Consultant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Resume/CV:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                <p class="file-formats">Supported formats: PDF, DOC, DOCX</p>
+            </div>
+
+            <div class="form-group">
+                <label for="cover_letter">Cover Letter (Optional):</label>
+                <textarea id="cover_letter" name="cover_letter" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile (Optional):</label>
+                <input type="url" id="linkedin" name="linkedin">
+            </div>
+
+            <div class="form-group">
+                <label for="portfolio">Portfolio Link (Optional - for Software Engineer/Marketing):</label>
+                <input type="url" id="portfolio" name="portfolio">
+            </div>
+
+            <div class="form-group">
+                <label for="relevant_experience">Relevant Experience:</label>
+                <textarea id="relevant_experience" name="relevant_experience" rows="5" placeholder="Please describe your relevant experience for this role." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Application</button>
+            <div id="submission-message" class="submission-message"></div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('applicationForm');
+    const submissionMessage = document.getElementById('submission-message');
+    const portfolioField = document.getElementById('portfolio');
+
+    // Get the job title from the page title (you might pass this differently)
+    const jobTitle = document.title.split('Apply for ')[1].split(' - ')[0];
+
+    // Show portfolio field for relevant roles
+    if (jobTitle.includes('Software Engineer') || jobTitle.includes('Marketing')) {
+        portfolioField.style.display = 'block';
+    } else {
+        portfolioField.style.display = 'none';
+    }
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Simulate form submission (replace with your actual AJAX call)
+        setTimeout(function() {
+            // For demonstration purposes
+            const isSuccess = Math.random() < 0.8; // Simulate success 80% of the time
+
+            if (isSuccess) {
+                submissionMessage.textContent = 'Application submitted successfully!';
+                submissionMessage.className = 'submission-message success';
+                form.reset(); // Clear the form
+            } else {
+                submissionMessage.textContent = 'There was an error submitting your application. Please try again.';
+                submissionMessage.className = 'submission-message error';
+            }
+        }, 1500); // Simulate a 1.5-second delay for submission
+    });
+});
+    </script>
+</body>
+</html>

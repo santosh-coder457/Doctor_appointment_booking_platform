@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult Online - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
+    <link rel="stylesheet" href="{% static 'consult.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/find_doctor/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/dashpage/">Consult Online</a></li>
+                <li><a href="/MedguardHome/medicine/">Medicines</a></li>
+                <li><a href="/MedguardHome/labs/">Labs</a></li>
+                <li><a href="/MedguardHome/surgeries/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/more/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="consult-online-page">
+        <h1>Consult Online</h1>
+        <div class="consult-options">
+            <div class="consult-option">
+                <img src="{% static 'doctor images/consult img 1.jpg' %}" alt="General Consultation">
+                <h3>General Consultation</h3>
+                <p>Consult with a general physician for common health concerns.</p>
+                <button class="start-consultation"><a href="https://www.docgenie.in/general-physicians/" target="_blank">Start Consultation</a></button>
+            </div>
+            <div class="consult-option">
+                <img src="{% static 'doctor images/consult img 2.jpg' %}" alt="Specialist Consultation">
+                <h3>Specialist Consultation</h3>
+                <p>Consult with specialists in various fields like cardiology, dermatology, etc.</p>
+                <button class="start-consultation"><a href="https://www.medibuddy.in/doctors/online-consultation" target="_blank">Start Consultation</a></button>
+            </div>
+            <div class="consult-option">
+                <img src="{% static 'doctor images/consult img 3.jpg' %}" alt="Mental Health Consultation">
+                <h3>Mental Health Consultation</h3>
+                <p>Consult with mental health professionals for emotional well-being.</p>
+                <button class="start-consultation"><a href="https://mindtribe.in/" target="_blank">Start Consultation</a></button>
+            </div>
+        </div>
+
+        <div class="consult-info">
+            <h2>How Online Consultation Works</h2>
+            <ol>
+                <li>Choose your consultation type.</li>
+                <li>Select a doctor or specialist.</li>
+                <li>Start your consultation via video or chat.</li>
+                <li>Receive your diagnosis and treatment plan.</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

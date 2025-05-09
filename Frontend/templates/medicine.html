@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Medicines - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
+    <link rel="stylesheet" href="{% static 'med.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/find_doctor/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/consults/">Consult Online</a></li>
+                <li><a href="/MedguardHome/dashpage/">Medicines</a></li>
+                <li><a href="/MedguardHome/labs/">Labs</a></li>
+                <li><a href="/MedguardHome/surgeries/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/more/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="medicines-page">
+        <h1>Order Medicines</h1>
+        <div class="medicine-search">
+        </div>
+        <div class="medicine-list">
+            <div class="medicine-item">
+                <img src="{% static 'medicine/tylenol.jpg' %}" alt="Medicine 1">
+                <h3>Acetaminophen (Tylenol)</h3>
+                <p>Description: Pain reliever</p>
+                <p>Price: ₹1692</p>
+                <a href="https://www.amazon.in/tylenol-tablets/s?k=tylenol+tablets" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/ibuproten.jpg' %}" alt="Medicine 2">
+                <h3>Ibuprofen (Advil, Motrin)</h3>
+                <p>Description: A nonsteroidal anti-inflammatory drug (NSAID) for pain, fever, and inflammation</p>
+                <p>Price: ₹939</p>
+                <a href="https://www.amazon.com/s?k=advil+tablets&hvadid=446949870653&hvdev=c&hvexpln=0&hvlocphy=9148852&hvnetw=g&hvocijid=5193214357444572252--&hvqmt=b&hvrand=5193214357444572252&hvtargid=kwd-118251025&hydadcr=15498_11889807&mcid=f8023e221ea43c35b9b807c1c551886f&tag=googhydr-20&ref=pd_sl_3lhkyzkm4u_b" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/amoxicillin.jpg' %}" alt="Medicine 3">
+                <h3>Amoxicillin</h3>
+                <p>Description: An antibiotic used to treat bacterial infections</p>
+                <p>Price: ₹203</p>
+                <a href="https://www.amazon.com/s?k=advil+tablets&hvadid=446949870653&hvdev=c&hvexpln=0&hvlocphy=9148852&hvnetw=g&hvocijid=5193214357444572252--&hvqmt=b&hvrand=5193214357444572252&hvtargid=kwd-118251025&hydadcr=15498_11889807&mcid=f8023e221ea43c35b9b807c1c551886f&tag=googhydr-20&ref=pd_sl_3lhkyzkm4u_b" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/lisinopril.jpg' %}" alt="Medicine 4">
+                <h3>Lisinopril</h3>
+                <p>Description: An ACE inhibitor used to treat high blood pressure</p>
+                <p>Price: ₹104.72 </p>
+                <a href="https://dir.indiamart.com/impcat/lisinopril-tablet.html" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/atorvastatin.jpg' %}" alt="Medicine 4">
+                <h3>Atorvastatin (Lipitor)</h3>
+                <p>Description: A statin used to lower cholesterol</p>
+                <p>Price: ₹48.40</p>
+                <a href="https://pharmeasy.in/online-medicine-order/lipitor-10mg-tablet-21876" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/metformin.jpg' %}" alt="Medicine 4">
+                <h3>Metformin</h3>
+                <p>Description: An oral medication used to treat type 2 diabetes</p>
+                <p>Price: ₹10.43</p>
+                <a href="http://suprameds.in/product/diabetic/diabetics/maxformin-sr-500mg-133299" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/levothyroxine.jpg' %}" alt="Medicine 4">
+                <h3>Levothyroxine (Synthroid)</h3>
+                <p>Description: A hormone replacement used to treat hypothyroidism</p>
+                <p>Price: Rs150.00</p>
+                <a href="https://pharmacy.amazon.com/Synthroid-Brand-for-Levothyroxine-Oral-Tablet/dp/B084C29QHQ" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/Omeprazole.jpg' %}" alt="Medicine 4">
+                <h3>Omeprazole (Prilosec)</h3>
+                <p>A proton pump inhibitor (PPI) used to reduce stomach acid</p>
+                <p>Price: ₹800</p>
+                <a href="https://www.indiamart.com/proddetail/prilosec-otc-omeprazole-delayed-release-20mg-2850312740530.html?srsltid=AfmBOooB5OaVQmndpTHqa9s8BgCRw2jQHz7_Yt-WWkSOJTXccEoeD_kp" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/Loratadine.jpg' %}" alt="Medicine 4">
+                <h3>Loratadine (Claritin)</h3>
+                <p>Description: an antihistamine used to relieve allergy symptoms</p>
+                <p>Price: ₹ 81</p>
+                <a href="https://www.indiamart.com/proddetail/buy-claritin-d-10-mg-online-2850155189273.html?srsltid=AfmBOorUgzKhpCsTDKaOCZlHPFNbkDUBJ1PkzNmXG8eJinbZqZg07DvM" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+            <div class="medicine-item">
+                <img src="{% static 'medicine/albuterol.jpg' %}" alt="Medicine 4">
+                <h3>Albuterol</h3>
+                <p>Description: a bronchodilator used to treat asthma</p>
+                <p>Price: $283</p>
+                <a href="https://store.usp.org/product/1012633?srsltid=AfmBOoqJH_CXFfY59OdoOqh30sJI7a6IpACpYHr09YCXKssqD70ASqYt" target="_blank">
+                    Online Booking
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

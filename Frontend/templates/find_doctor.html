@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Doctors - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'find-doctors.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/dashpage/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/consults/">Consult Online</a></li>
+                <li><a href="/MedguardHome/medicine/">Medicines</a></li>
+                <li><a href="/MedguardHome/labs/">Labs</a></li>
+                <li><a href="/MedguardHome/surgeries/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/more/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="find-doctors-page">
+        <h1>Find Doctors</h1>
+
+        <a href="/MedguardHome/appointment/">
+                    <button class="book-appointment">Book Appointment</button>
+                </a>
+
+        <div class="doctors-list">
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/kl gir.jpg' %}" alt="Dr.E.Shilpa Ghosh">
+                <h3>Dr.E.Shilpa Ghosh</h3>
+                <p>Specialty: Gynecology, Obstetrics, Laparoscopic Surgery</p>
+                <p>Location: Delhi</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.E.Shilpa Ghosh'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/shilpa/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/kl gir2.jpg' %}" alt="Dr.S.Bhawna Sirohi">
+                <h3>Dr.S.Bhawna Sirohi</h3>
+                <p>Specialty: Medical Oncology</p>
+                <p>Location: Chennai</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.S.Bhawna Sirohi'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/bhawna/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/delhi.avif' %}" alt="Dr.H.Ravinder Gera">
+                <h3>Dr.H.Ravinder Gera</h3>
+                <p>Specialty: ENT</p>
+                <p>Location: Delhi</p>
+                <!-- <a href="">
+                    <button class="book-appointment">Book Appointment</button>
+                </a> -->
+                
+                <a href="/MedguardHome/ravinder/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/delhi 2.jpg' %}" alt="Dr.Jeeson C Unni">
+                <h3>Dr.Jeeson C Unni</h3>
+                <p>Specialty: Paediatrics</p>
+                <p>Location: Kochi</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.Jeeson C Unni'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/jeeson/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/kl 3.jpg' %}" alt="Dr.R.Aswathy">
+                <h3>Dr.R.Aswathy.</h3>
+                <p>Specialty: Anaesthesiology & Critical Care</p>
+                <p>Location: Kochi</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.R.Aswathy'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/aswathy/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/gurugam1.jpg' %}" alt="Dr.M.Aravind">
+                <h3>Dr.M.Aravind</h3>
+                <p>Specialty: Liver Transplant Surgery</p>
+                <p>Location: Chennai</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.M.Aravind'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/aravind/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/gurugam2.jpg' %}" alt="Dr. T.Sai Kishore">
+                <h3>Dr. T.Sai Kishore</h3>
+                <p>Specialty: Neurology</p>
+                <p>Location: Chennai</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr. T.Sai Kishore'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/sai/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/OIP1.jpg' %}" alt="Dr.V.Randhir Sud">
+                <h3>Dr.V.Randhir Sud</h3>
+                <p>Specialty: Gastroenterology</p>
+                <p>Location: Gurugram</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.V.Randhir Sud'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/randhir/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/OIP2.jpg' %}" alt="Dr.S.Vinod Raina">
+                <h3>Dr.S.Vinod Raina</h3>
+                <p>Specialty: Medical Oncology</p>
+                <p>Location: Mumbai </p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.S.Vinod Raina'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/vinod/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/OIP3.jpg' %}" alt="Dr.A.Naresh Trehan">
+                <h3>Dr.A.Naresh Trehan</h3>
+                <p>Speciality: Cardiology</p>
+                <p>Location: Gurugram</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.A.Naresh Trehan'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/naresh/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/OIP4.jpg' %}" alt="Dr.M.Manikandan">
+                <h3>Dr.M.Manikandan</h3>
+                <p>Speciality: Hematology</p>
+                <p>Location: Coimbatore</p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.M.Manikandan'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/mani/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+            <div class="doctor-card">
+                <img src="{% static 'doctor images/asha.jpg' %}" alt="Dr.P.Asha Kishore">
+                <h3>Dr.P.Asha Kishore</h3>
+                <p>Speciality: Neurology, specifically Parkinson's & Movement Disorders</p>
+                <p>Location: Thrissur </p>
+                <!-- <a href="">
+                    <button class="book-appointment" onclick="window.location.href='appointmentform.html?doctor=Dr.P.Asha Kishore'">Book Appointment</button>
+                </a> -->
+
+                <a href="/MedguardHome/asha/" >
+                    <button class="book-appointment">About Doctor</button>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // appointment-form.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to extract doctor's name from the URL query parameters
+    function getDoctorNameFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('doctor');
+    }
+
+    // Get the doctor's name from the URL
+    const doctorName = getDoctorNameFromURL();
+
+    // If a doctor's name is found, populate the input field
+    if (doctorName) {
+        document.getElementById('doctorName').value = doctorName;
+    }
+
+    // You can add other JavaScript code for your appointment form here,
+    // such as form validation or handling the submit event.
+    const appointmentForm = document.getElementById('appointmentForm');
+    if (appointmentForm) {
+        appointmentForm.addEventListener('submit', function(event) {
+            // Example: Prevent default form submission for now
+            event.preventDefault();
+            console.log('Appointment form submitted!');
+            // You would typically send the form data to a server here.
+        });
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
+    <link rel="stylesheet" href="{% static 'more.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MedguardHome/find_doctor/">Find Doctors</a></li>
+                <li><a href="/MedguardHome/consults/">Consult Online</a></li>
+                <li><a href="/MedguardHome/medicine/">Medicines</a></li>
+                <li><a href="/MedguardHome/labs/">Labs</a></li>
+                <li><a href="/MedguardHome/surgeries/">Surgeries</a></li>
+                <li><a href="/MedguardHome/tips/">Tips</a></li>
+                <li><a href="/MedguardHome/dashpage/">More</a></li>
+            </ul>
+        </nav>
+        <div class="login-signup">
+            <button><a href="/logout/">Logout</a></button>
+        </div>
+    </header>
+
+    <section class="more-page">
+        <h1>More Options</h1>
+
+        <div class="more-options">
+            <div class="option-item">
+                <img src="{% static 'more/About Us.avif' %}" alt="About Us">
+                <h3>About Us</h3>
+                <p>Learn more about MedGuard and our mission.</p>
+                <a href="/MedguardHome/abouts/" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="option-item">
+                <img src="{% static 'more/Contact Us.avif' %}" alt="Contact Us">
+                <h3>Contact Us</h3>
+                <p>Get in touch with our support team.</p>
+                <a href="/MedguardHome/contact/" class="learn-more">Contact Us</a>
+            </div>
+
+            <div class="option-item">
+                <img src="{% static 'more/Careers.avif' %}" alt="Careers">
+                <h3>Careers</h3>
+                <p>Explore job opportunities at MedGuard.</p>
+                <a href="/MedguardHome/career/" class="learn-more">View Careers</a>
+            </div>
+
+            <div class="option-item">
+                <img src="{% static 'more/FAQ.avif' %}" alt="FAQ">
+                <h3>FAQ</h3>
+                <p>Frequently asked questions about our services.</p>
+                <a href="/MedguardHome/FAQ/" class="learn-more">View FAQ</a>
+            </div>
+
+            <div class="option-item">
+                <img src="{% static 'more/Privacy Policy.avif' %}" alt="Privacy Policy">
+                <h3>Privacy Policy</h3>
+                <p>Learn about our privacy policy.</p>
+                 <a href="/MedguardHome/privacy/" class="learn-more">View Privacy Policy</a>
+            </div>
+
+             <div class="option-item">
+                <img src="{% static 'more/Terms of Service.avif' %}" alt="Terms of Service">
+                <h3>Terms of Service</h3>
+                <p>Learn about our Terms of service.</p>
+                <a href="/MedguardHome/terms/" class="learn-more">View Terms of Service</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

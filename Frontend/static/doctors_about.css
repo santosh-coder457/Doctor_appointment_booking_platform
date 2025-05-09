@@ -1,0 +1,96 @@
+/* asha.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0; /* Reset default body margin */
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add some top margin */
+    width: 90%; /* Adjust width for smaller screens */
+}
+
+.header-wrapper {
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+.logo {
+    max-width: 150px; /* Adjust logo size as needed */
+    height: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.biography h2, .contact h2 {
+    font-size: 1.8em;
+    color: #007bff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.biography p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.contact h4{
+    font-size: 1.8em;
+    color: #007bff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+
+.back-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,33 @@
+/* tips.css */
+
+.tips-page {
+    padding: 20px;
+}
+
+.tip-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tip-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.tip-item img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.tip-item h3 {
+    margin-bottom: 10px;
+}
+
+.tip-item p {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,54 @@
+/* find-doctors.css */
+
+.find-doctors-page {
+    padding: 20px;
+}
+
+.search-doctors {
+    margin-bottom: 20px;
+}
+
+.search-doctors input {
+    padding: 10px;
+    width: 300px;
+}
+
+.search-doctors button {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.doctor-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.doctor-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.book-appointment {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}

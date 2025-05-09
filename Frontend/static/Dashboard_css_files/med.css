@@ -1,0 +1,63 @@
+/* medicines.css */
+
+.medicines-page {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.medicine-search {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.medicine-search input {
+    padding: 10px;
+    width: 300px;
+}
+
+.medicine-search button {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.medicine-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.medicine-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.medicine-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #19a99d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cart{
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+ 

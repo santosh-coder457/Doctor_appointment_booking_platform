@@ -1,0 +1,171 @@
+/* careers.css */
+.careers-hero {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.careers-hero .hero-image {
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+.careers-hero .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.careers-hero .hero-content h1 {
+    color: #19a99d;
+    margin-bottom: 10px;
+}
+
+.careers-hero .hero-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.open-positions-section {
+    padding: 40px 20px;
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.open-positions-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.open-positions-section .job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.open-positions-section .job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.open-positions-section .job-card h3 {
+    color:#19a99d;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.open-positions-section .job-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.open-positions-section .job-card .apply-button {
+    display: inline-block;
+    background-color: #28a745; /* Green apply button */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.open-positions-section .job-card .apply-button:hover {
+    background-color: #218838;
+}
+
+.open-positions-section .note {
+    text-align: center;
+    color: #777;
+}
+
+.open-positions-section .note a {
+    color: #19a99d;
+    text-decoration: none;
+}
+
+.open-positions-section .note a:hover {
+    text-decoration: underline;
+}
+
+.why-medguard-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-medguard-section h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.why-medguard-section .why-medguard-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.why-medguard-section .point {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.why-medguard-section .point h3 {
+    color: #19a99d;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#Apply{
+    text-align: center;
+    display: inline-block;
+    background-color: #28a745; /* Green apply button */
+    color:#333;
+    padding: 5px 10px;
+    width: 20%;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#Apply:hover{
+    background-color: lightgreen;
+    color: white;
+}
+.why-medguard-section .point p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+footer {
+    
+    color:#19a99d;
+    text-align: center;
+    padding: 1rem 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .open-positions-section .job-listings {
+        grid-template-columns: 1fr;
+    }
+
+    .why-medguard-section .why-medguard-points {
+        grid-template-columns: 1fr;
+    }
+   
+}

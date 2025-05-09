@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MedGuard</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'MorePage_details_css_file/contact.css' %}">
+</head>
+<body>
+    <section class="contact-hero">
+        <div class="hero-image">
+            <a href="/MedguardHome/more/"> <img src="{% static '/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a>
+        </div>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our friendly support team for any inquiries or assistance.</p>
+            <a href="#contact-form-section" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+
+    <section id="contact-form-section" class="contact-form-section">
+        <h2>Send us a message</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button id="mybutton"type="submit" class="submit-button" onclick="alert('message has been send thankyou for Contact us MedGuard')" >Send Message</button>
+          
+        </form>
+    </section>
+
+    <section class="contact-info-section">
+        <h2>Contact Information</h2>
+        <div class="contact-details">
+            <div class="detail-item">
+                <h3>Address:</h3>
+                <p>123 Health Street,MedCity, India</p>
+            </div>
+            <div class="detail-item">
+                <h3>Phone:</h3>
+                <p>+91 98765478</p>
+            </div>
+            <div class="detail-item">
+                <h3>Email:</h3>
+                <p><a href="mailto:support@medguard.com">support@medguard.com</a></p>
+            </div>
+            <div class="detail-item">
+                <h3>Business Hours:</h3>
+                <p>A Service Is Being Provided Throughout 24/7 </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 MedGuard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
