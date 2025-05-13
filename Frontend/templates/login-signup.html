@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     {% load static %}
-    <link rel="icon" href="{% static 'MedGuard logo.jpg' %}">
-    <link rel="stylesheet" href="{% static 'login-signup.css' %}">
+    <link rel="icon" href="{% static 'Dashboard_css_files/MedGuard logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/login-signup.css' %}">
 </head>
 <body>
     
     <div class="container">
         <div class="form-container">
             <div class="form-wrapper" id="loginForm">
+                <h2 style="color: #19a99d;">Welcome To MedGuard</h2>
+                <strong>
+
+                    <p style="color: #82e0aa;">Your Health, Our Priority</p>
+
+                </strong>
+                
                 <h2>Login</h2>
                 <form id="login-form" action="" method="POST">
                     {% csrf_token %}
