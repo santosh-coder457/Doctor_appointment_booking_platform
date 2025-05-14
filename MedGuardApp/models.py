@@ -1,5 +1,5 @@
 from django.db import models
-from django.db import models
+
 
 DOCTOR_CHOICES = [
     ('Dr.E.Shilpa Ghosh', 'Dr.E.Shilpa Ghosh'),
