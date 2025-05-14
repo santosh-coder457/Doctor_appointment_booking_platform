@@ -1,8 +1,25 @@
 from django.db import models
+from django.db import models
+
+DOCTOR_CHOICES = [
+    ('Dr.E.Shilpa Ghosh', 'Dr.E.Shilpa Ghosh'),
+    ('Dr.S.Bhawna Sirohi', 'Dr.S.Bhawna Sirohi'),
+    ('Dr.H.Ravinder Gera', 'Dr.H.Ravinder Gera'),
+    ('Dr.Jeeson C Unni', 'Dr.Jeeson C Unni'),
+    ('Dr.R.Aswathy.', 'Dr.R.Aswathy.'),
+    ('Dr.M.Aravind', 'Dr.M.Aravind'),
+    ('Dr. T.Sai Kishore', 'Dr. T.Sai Kishore'),
+    ('Dr.V.Randhir Sud', 'Dr.V.Randhir Sud'),
+    ('Dr.S.Vinod Raina', 'Dr.S.Vinod Raina'),
+    ('Dr.A.Naresh Trehan', 'Dr.A.Naresh Trehan'),
+    ('Dr.M.Manikandan', 'Dr.M.Manikandan'),
+    ('Dr.P.Asha Kishore', 'Dr.P.Asha Kishore'),
+    
+]
 
 
 class Appointment(models.Model):
-    doctor_name = models.CharField(max_length=255)
+    doctor_name = models.CharField(max_length=255,choices=DOCTOR_CHOICES,)
     patient_name = models.CharField(max_length=255)
     patient_email = models.EmailField()
     patient_phone = models.CharField(max_length=20, blank=True, null=True)
@@ -13,5 +30,7 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"Appointment for {self.patient_name}..." # Notice the typo 'paient_name'
+
+    
 
     

@@ -1,9 +1,7 @@
-from django.forms import ModelForm
-from .models import *
+from django import forms
+from .models import Appointment, DOCTOR_CHOICES
 
-class AppointmentForm(ModelForm):
-
+class AppointmentForm(forms.ModelForm):
     class Meta:
-
         model = Appointment
         fields = '__all__'
