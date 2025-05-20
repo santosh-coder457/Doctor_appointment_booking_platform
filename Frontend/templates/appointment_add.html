@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'Dashboard_css_files/MedGuard logo.jpg' %}">
+    <!-- <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'Dashboard_css_files/appointment-form.css' %}">
+
+    <style>
+        h1{
+            color: #19a99d;
+        }
+        table{
+            border-radius: 0.5;
+            text-align: center;
+        }
+        body a button:hover{
+            background-color: #19a99d;
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Booking history</h1>
+<center>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Doctor_Name</th>
+            <th>Patient_Name</th>
+            <th>Patient_Email</th>
+            <th>Patient_Phone</th>
+            <th>Appointment_Date</th>
+            <th>Appointment_Time</th>
+            <th>Reason</th>
+            <!-- <th>Update</th> -->
+            <th>Cancel</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in all_history %}
+
+        <tr>
+            <td>{{appointment.doctor_name}}</td>
+            <td>{{appointment.patient_name}}</td>
+            <td>{{appointment.patient_email}}</td>
+            <td>{{appointment.patient_phone}}</td>
+            <td>{{appointment.appointment_date}}</td>
+            <td>{{appointment.appointment_time}}</td>
+            <td>{{appointment.reason}}</td>
+            <!-- <td>
+                <a href="{% url 'appointment_update' appointment.id %}">
+                    <button>Update</button>
+                </a>
+            </td> -->
+            <td>
+                <a  href="{% url 'appointment_delete' appointment.id %}" class="btn" >
+                    <button>Cancel</button>
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/MedguardHome/appointment/"><button style="background-color: #19a99d;color: aliceblue;cursor: pointer;"><h3>Book New Appintment</h3></button></a>
+</center>
+</body>
+</html>

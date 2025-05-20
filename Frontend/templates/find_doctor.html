@@ -8,6 +8,28 @@
     <link rel="icon" href="{% static 'Dashboard_css_files/MedGuard logo.jpg' %}">
     <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
     <link rel="stylesheet" href="{% static 'Dashboard_css_files/find-doctors.css' %}">
+    
+<style>
+
+    .top-buttons {
+    text-align: center; /* Centers the buttons horizontally */
+    margin-bottom: 30px; /* Adds space below the buttons */
+
+    }
+
+    .top-buttons a {
+    text-decoration: none; /* Removes underline from the links */
+    display: inline-block; /* Makes the links behave like blocks but sit inline */
+    margin: 0 10px; /* Adds 10px margin to the left and right of each button */
+    /* You can adjust 10px to increase or decrease the gap */
+    }
+
+    
+
+
+
+
+</style>
 </head>
 <body>
     <header>
@@ -32,10 +54,16 @@
 
     <section class="find-doctors-page">
         <h1>Find Doctors</h1>
-
+        <div>
         <a href="/MedguardHome/appointment/">
-                    <button class="book-appointment">Book Appointment</button>
-                </a>
+            <button class="book-appointment">Book Appointment</button>
+        </a>
+        <a href="/MedguardHome/appointment/history/" style="margin: 40px 40px 40px 40px; border: none; text-decoration: none;">
+            <button>History</button>
+        </a>
+        </div>
+
+        
 
         <div class="doctors-list">
             <div class="doctor-card">

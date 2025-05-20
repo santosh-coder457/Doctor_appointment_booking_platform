@@ -1,68 +1,239 @@
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Doctors</title>
-    {% load static %}
     <link rel="icon" href="{% static 'Dashboard_css_files/MedGuard logo.jpg' %}">
-    <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'Dashboard_css_files/style.css' %}"> -->
     <link rel="stylesheet" href="{% static 'Dashboard_css_files/appointment-form.css' %}">
     <style>
-        body{
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1{
-    text-align: center;
-    color: #19a99d;
-    margin-top: 20px;
-  }
-  
-  form {
-    color: #19a99d;
-    max-width: 600px;
-    margin: 20px auto;
-    padding:50px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  input[type="submit"] {
-    background-color: #20c997;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #198754;
-  }
+        /* General Body and Container Styling */
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 450px; /* Adjust width as needed */
+        }
+        h1 {
+            text-align: center;
+            color: #20c997;
+            margin-bottom: 25px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* FORM LAYOUT STYLING (THE KEY FOR "EQUALLY" ALIGNED) */
+        .form-row {
+            display: flex; /* Enables Flexbox for horizontal alignment */
+            align-items: center; /* Vertically centers label and input */
+            margin-bottom: 15px; /* Space between rows */
+        }
+        .form-row label {
+            flex: 0 0 140px; /* Fixed width for labels */
+            margin-right: 15px; /* Space between label and input */
+            text-align: right; /* Aligns label text to the right */
+            color: #20c997;
+            font-weight: bold;
+        }
+        .form-row .field-wrapper {
+            flex-grow: 1; /* Input takes up remaining space */
+        }
+
+        /* Input Field Styling */
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="tel"],
+        .form-row input[type="date"],
+        .form-row input[type="time"],
+        .form-row select,
+        .form-row textarea { /* Added textarea here for consistent styling */
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding/border are inside width */
+        }
+
+        .form-row textarea {
+            resize: vertical; /* Allow vertical resizing for reason field */
+            min-height: 80px; /* Minimum height for textarea */
+        }
+
+        /* Adjust for textarea alignment, if label is too short */
+        .form-row.reason-field {
+            align-items: flex-start; /* Align label to the top of the textarea */
+        }
+        .form-row.reason-field label {
+            padding-top: 10px; /* Adjust to visually align with textarea's start */
+        }
+
+
+        /* Submit Button Styling */
+        .submit-button-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .submit-button-wrapper input[type="submit"] {
+            padding: 12px 30px;
+            background-color: #20c997;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button-wrapper input[type="submit"]:hover {
+            background-color: #1a9c78;
+        }
+
+        /* Error Message Styling */
+        .errorlist {
+            color: red;
+            font-size: 0.85em;
+            margin-top: 5px;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
     </style>
 </head>
 <body>
-    
-    
-    <form action="" method="POST" >
+    <div class="container">
         <div class="logo">
            <center> <a href="/MedguardHome/dashpage/" style="background: none;"> <img src="{% static 'Dashboard_css_files/MedGuard logo.jpg' %}" alt="MedGuard Logo"></a></center>
         </div>
         <h1>Book Doctors</h1>
-        {% csrf_token %}
-        {{appointment_form}}
-        <input type="submit" value="Submit Appointment">
-    </form>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {# Doctor Name (Select/Dropdown) #}
+            <em><p>
+                   <strong> Note :- </strong>First is Doctor_Name and after Comma is Doctor's Speciality
+                 </p></em>
+            <div class="form-row">
+                <label for="{{ appointment_form.doctor_name.id_for_label }}">Doctor name:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.doctor_name }}
+                    {% if appointment_form.doctor_name.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.doctor_name.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Patient Name #}
+            <div class="form-row">
+                <label for="{{ appointment_form.patient_name.id_for_label }}">Patient name:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.patient_name }}
+                    {% if appointment_form.patient_name.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.patient_name.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Patient Email #}
+            <div class="form-row">
+                <label for="{{ appointment_form.patient_email.id_for_label }}">Patient email:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.patient_email }}
+                    {% if appointment_form.patient_email.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.patient_email.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Patient Phone #}
+            <div class="form-row">
+                <label for="{{ appointment_form.patient_phone.id_for_label }}">Patient phone:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.patient_phone }}
+                    {% if appointment_form.patient_phone.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.patient_phone.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Appointment Date #}
+            <div class="form-row">
+                <label for="{{ appointment_form.appointment_date.id_for_label }}">Appointment date:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.appointment_date }}
+                    {% if appointment_form.appointment_date.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.appointment_date.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Appointment Time #}
+            <div class="form-row">
+                <label for="{{ appointment_form.appointment_time.id_for_label }}">Appointment time:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.appointment_time }}
+                    {% if appointment_form.appointment_time.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.appointment_time.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Reason (Textarea) #}
+            <div class="form-row reason-field"> {# Specific class for textarea alignment #}
+                <label for="{{ appointment_form.reason.id_for_label }}">Reason:</label>
+                <div class="field-wrapper">
+                    {{ appointment_form.reason }}
+                    {% if appointment_form.reason.errors %}
+                        <ul class="errorlist">
+                            {% for error in appointment_form.reason.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="submit-button-wrapper" onclick="alert('Appointment Has Been Successfully Completed.Go and Check History')">
+                <input type="submit" value="Submit Appointment">
+            </div>
+
+            <div class="submit-button-wrapper" id="two">
+              <a href="/MedguardHome/find_doctor/">
+                <input type="back" value="Go Find Doctor"
+                 style="background-color:#20c997;text-align: center;
+                color: aliceblue; border: none; padding: 12px 13px; font-size: 15px; font-weight: bold;border-radius: 5px;
+                cursor: pointer;">
+              </a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
