@@ -140,32 +140,35 @@ def appointment(request):
 
 
 
+def history(request):
+
+    context = {
+
+        "all_history" : Appointment.objects.all()
+    }
+
+    return render (request,'appointment_add.html',context)
 
 
-# def add_appointment(request):
 
-#     context={
-#         'appointment':AppointmentForm()
-#     }
+def Delete(request,id):
 
-#     if request.method == "POST":
+    select_appointment = Appointment.objects.get(id = id)
 
-#         form = AppointmentForm(request.POST)
+    select_appointment.delete()
 
-#         if form.is_valid():
+    return redirect ('/MedguardHome/appointment/history')
 
-#             form.save()
 
-#     return render(request,'appointmentform.html',context)
 
-# def add_appointment(request):
+def Update (request,id):
 
-#     context= {
-#         'submit':AppointmentForm
-#     }
+    select_appointment = Appointment.objects.get(id = id)
 
-#     if request.method == "POST":
+    context = {
 
-#         print(request.POST)
+        'form' : AppointmentForm(instance = select_appointment)
 
-#     return render(request,'appointmentform.html',context)
+    }
+
+    return render (request , 'appointment.html',context)

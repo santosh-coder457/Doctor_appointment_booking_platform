@@ -2,18 +2,18 @@ from django.db import models
 
 
 DOCTOR_CHOICES = [
-    ('Dr.E.Shilpa Ghosh', 'Dr.E.Shilpa Ghosh'),
-    ('Dr.S.Bhawna Sirohi', 'Dr.S.Bhawna Sirohi'),
-    ('Dr.H.Ravinder Gera', 'Dr.H.Ravinder Gera'),
-    ('Dr.Jeeson C Unni', 'Dr.Jeeson C Unni'),
-    ('Dr.R.Aswathy.', 'Dr.R.Aswathy.'),
-    ('Dr.M.Aravind', 'Dr.M.Aravind'),
-    ('Dr. T.Sai Kishore', 'Dr. T.Sai Kishore'),
-    ('Dr.V.Randhir Sud', 'Dr.V.Randhir Sud'),
-    ('Dr.S.Vinod Raina', 'Dr.S.Vinod Raina'),
-    ('Dr.A.Naresh Trehan', 'Dr.A.Naresh Trehan'),
-    ('Dr.M.Manikandan', 'Dr.M.Manikandan'),
-    ('Dr.P.Asha Kishore', 'Dr.P.Asha Kishore'),
+    ('Dr.E.Shilpa Ghosh', 'Dr.E.Shilpa Ghosh, Gynecology'),
+    ('Dr.S.Bhawna Sirohi', 'Dr.S.Bhawna Sirohi,Medical Oncology'),
+    ('Dr.H.Ravinder Gera', 'Dr.H.Ravinder Gera,ENT'),
+    ('Dr.Jeeson C Unni', 'Dr.Jeeson C Unni,Paediatrics'),
+    ('Dr.R.Aswathy.', 'Dr.R.Aswathy,Anaesthesiology & Critical Care'),
+    ('Dr.M.Aravind', 'Dr.M.Aravind, Liver Transplant Surgery'),
+    ('Dr. T.Sai Kishore', 'Dr. T.Sai Kishore,Neurology'),
+    ('Dr.V.Randhir Sud', 'Dr.V.Randhir Sud,Gastroenterology'),
+    ('Dr.S.Vinod Raina', 'Dr.S.Vinod Raina,Medical Oncology'),
+    ('Dr.A.Naresh Trehan', 'Dr.A.Naresh Trehan,Cardiology'),
+    ('Dr.M.Manikandan', 'Dr.M.Manikandan,Hematology'),
+    ('Dr.P.Asha Kishore', 'Dr.P.Asha Kishore,Neurology'),
     
 ]
 

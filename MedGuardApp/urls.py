@@ -13,6 +13,9 @@ urlpatterns = [
     path('more/',more),
     path('login/',logsing),
     path('appointment/',appointment),
+    path('appointment/history/',history),
+    path('appointment/history/delete/<int:id>/',Delete,name='appointment_delete'),
+    path('appointment/history/update/<int:id>/',Update,name='appointment_update'),
     
   
 
